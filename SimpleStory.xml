@@ -1,0 +1,118 @@
+<!--
+  TAGS description
+  
+
+  
+  <par>
+      paragraph tag
+      takes arguments as conditional values, if all variables are true, the paragraph is evaluated
+      can contain other tags, which are evaluated if the paragraph is evaluated
+      
+  <mod>
+      modifiable tag
+      takes 1 argument, name: "id" - it defines the name of the variable for the array of possible choises for that modifiable
+      can only contain <pos> tags
+      
+      <pos> - second level tag (only in mod)
+      possibility tag - can only be used inside <mod>
+      takes as arguments the variables to set if the possibility is choosen
+  
+  <jum>
+      jump tag
+      takes as argument as id
+      the evaluation is suspended till the next <anc> tag with the same id (which has therefore to be on the same level or on the first one)
+      
+  <anc>
+      anchor tag
+      takes an argument as id
+      the evaluation continues if it has been stopped by a jump with the same tag
+      
+  <set />
+      each argument set a variable to a certain value
+  
+  <and>
+  <or>
+      conditional tags
+      their arguments are evaluated as "or" or "and"
+      if the evaluation returns true, the content is parsed
+  
+  <if_and>
+  <if_or>
+      conditional tags of second order
+      they take no arguments but second level tags: and, or, then, else
+      <then> second level tag
+      <else> second level tag
+      
+      
+  examples:
+  <if_or> <and var1="0" var2="0"> <or var1="0" var3="1"> <then>If true</then> <else>If false</else> </if or>   
+  
+  <set a1='-1' />
+  <set a1='+3' />
+  <set a2='0' />
+  <set a3='4' />
+  <set a4='0' />
+  <set a5='0' />
+  <set a6='5' />
+
+  <if_and>
+    <and a1='se_2' a2='0' a3='se_44'/>
+    <or a4='2' a5='!_2' a6='be_6' />
+    <then>
+      <par>true*br_</par>
+    </then>
+    <else>
+      <par>false*br_</par>
+    </else>
+  </if_and>
+  
+  
+     
+
+  SPECIAL SIGNS:
+  
+  *br_    becomes <br>   it's a line feed / line break
+  
+  up to two levels, indetation is removed
+  
+  
+  
+  VARIABLE COMPARISONS
+  
+  var1 = '0'      ==
+  var1 = '!_0'    !=    different
+  var1 = 's_0'    <     smaller
+  var1 = 'b_0'    >     bigger
+  var1 = 'se_0'   <=    smaller or equal
+  var1 = 'be_0'   >=    bigger or equal
+  
+  
+  
+  VARIABLE SETTING
+  
+  var1 = '0'    =
+  var1 = '+0'   +
+  var1 = '-0'   -
+  
+  DESIDERATA:
+  
+  - optional possibilities = possibilities which are there only if some variable... PROBLEM: the Dictionary of choises!
+      for now: implement it repeating the <mod> in two conditionals
+  - condition evaluation: not, bigger, smaller, OR
+  
+  
+  -->
+
+
+<text>
+
+  <par>It's a very simple story: *br_*br_</par>
+  <par>You are </par>
+  <mod>
+    <pos lose="0">losing. </pos>
+    <pos lose="1">winning. </pos>
+  </mod>
+  <par lose="0">*br_YOU LOST</par>
+  <par lose="1">*br_YOU WON</par>
+  
+</text>
