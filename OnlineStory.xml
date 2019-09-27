@@ -1,0 +1,233 @@
+<!--
+  TAGS description
+  
+
+  
+  <par>
+      paragraph tag
+      takes arguments as conditional values, if all variables are true, the paragraph is evaluated
+      can contain other tags, which are evaluated if the paragraph is evaluated
+      
+  <mod>
+      modifiable tag
+      takes 1 argument, name: "id" - it defines the name of the variable for the array of possible choises for that modifiable
+      can only contain <pos> tags
+      
+      <pos> - second level tag (only in mod)
+      possibility tag - can only be used inside <mod>
+      takes as arguments the variables to set if the possibility is choosen
+  
+  <jum>
+      jump tag
+      takes as argument as id
+      the evaluation is suspended till the next <anc> tag with the same id (which has therefore to be on the same level or on the first one)
+      
+  <anc>
+      anchor tag
+      takes an argument as id
+      the evaluation continues if it has been stopped by a jump with the same tag
+      
+  <set />
+      each argument set a variable to a certain value
+  
+  <and>
+  <or>
+      conditional tags
+      their arguments are evaluated as "or" or "and"
+      if the evaluation returns true, the content is parsed
+  
+  <if_and>
+  <if_or>
+      conditional tags of second order
+      they take no arguments but second level tags: and, or, then, else
+      <then> second level tag
+      <else> second level tag
+      
+      
+  examples:
+  <if_or> <and var1="0" var2="0"> <or var1="0" var3="1"> <then>If true</then> <else>If false</else> </if or>   
+  
+  <set a1='-1' />
+  <set a1='+3' />
+  <set a2='0' />
+  <set a3='4' />
+  <set a4='0' />
+  <set a5='0' />
+  <set a6='5' />
+
+  <if_and>
+    <and a1='se_2' a2='0' a3='se_44'/>
+    <or a4='2' a5='!_2' a6='be_6' />
+    <then>
+      <par>true*br_</par>
+    </then>
+    <else>
+      <par>false*br_</par>
+    </else>
+  </if_and>
+  
+  
+     
+
+  SPECIAL SIGNS:
+  
+  *br_    becomes <br>   it's a line feed / line break
+  
+  up to two levels, indetation is removed
+  
+  
+  
+  VARIABLE COMPARISONS
+  
+  var1 = '0'      ==
+  var1 = '!_0'    !=    different
+  var1 = 's_0'    <     smaller
+  var1 = 'b_0'    >     bigger
+  var1 = 'se_0'   <=    smaller or equal
+  var1 = 'be_0'   >=    bigger or equal
+  
+  
+  
+  VARIABLE SETTING
+  
+  var1 = '0'    =
+  var1 = '+0'   +
+  var1 = '-0'   -
+  
+  DESIDERATA:
+  
+  - optional possibilities = possibilities which are there only if some variable... PROBLEM: the Dictionary of choises!
+      for now: implement it repeating the <mod> in two conditionals
+  - condition evaluation: not, bigger, smaller, OR
+  
+  
+  -->
+
+
+<text>
+  <set notToday="0"/>
+  <par>Jhonny first day of work.*br_*br_</par>
+
+
+  <par>We are online*br_</par>
+    
+
+  
+  <par>It's 9h55 am on monday morning. Many people are already at school or at work, but Jhonny is still asleep. At 10am his alarm starts to play.
+"What? Oh no!" he thinks, as he remembers that today is it's first day of work.
+The radio alarm <mod id='alarm content'>
+      <pos radioAlarmContent='0'>is playing music. </pos>
+      <pos radioAlarmContent='1'>is playing the news. </pos>
+      <pos radioAlarmContent='2'>is telling the Weather.</pos></mod></par>
+  <par radioAlarmContent='0'>The Radiohead are playing "Creep". </par>
+  <par radioAlarmContent='1'>Apparently there has been another leak of classified sensitive information. </par>
+  <par radioAlarmContent='2'>Another day without an hurricane to put this town out of its misery. </par>
+  <par>He's not used to wake up so early. "I need a shower" he thinks while he steps out of bed. </par>
+  <par>He is rubbing his head and <par radioAlarmContent='0'>humming Creep</par><par radioAlarmContent='1'>mentally insulting the whole institution of Governement</par><par radioAlarmContent='2'>praying for a Tsunami</par> when he slips and falls. </par>
+  
+  <par>
+"You see? To wake up so early is dangerous!" he confirms himself. His <mod id='hurting body part in the shower'>
+    <pos bodyPartHurting='0'>head</pos>
+    <pos bodyPartHurting='1'>knee</pos>
+    <pos bodyPartHurting='2'>elbow</pos>
+  </mod> is hurting.</par>
+  
+  <par>
+This is no good start in the day, he mumbles. Is it a sign? Should he stay home? But he promised his mother he will give it a try. In that moment Jhonny notices that his mother <mod id='is mommy home?'>
+      <pos mommyAtHome='0'>is home</pos>
+      <pos mommyAtHome='1'>isn't home</pos>
+    </mod>. </par>
+  
+  
+  <par mommyAtHome='0'>A smell of pancakes comes from the kitchen. Why didn't she go to work? "Hi mom!" "Goodmorning Jay! Aren't you excited? I could barely sleep tonight! Uncle Ben called already and he is also excited."
+"Ehm, sure" answers Jhonny, with the first pancake already in his mouth, "totally..." While his mother keeps talking about the meaning of this day for his life and for the family, Jhonny goes back to <par radioAlarmContent='0'>hum Creep in his Head. </par><par radioAlarmContent='1'>mentally insulting the whole institution of Governement and work. </par><par radioAlarmContent='2'>praying for a Tsunami to end all of this.</par>
+</par>
+  
+  <par mommyAtHome='1'>Of course not, she must be at work! He is rarely up in the morning, but he knows, in theory, that other people are awake at working at this time. Poor mom.
+Well, It's time to prepare some breakfast.
+What do people eat for breakfast? He goes to the kitchen and starts roaming around looking for edibles. After fews seconds he finds <mod id='eaten breakfast food'>
+  <pos whatEatForBreakfast='0'>some rest of Pizza from the day before</pos>
+  <pos whatEatForBreakfast='1'>milk and cereal</pos>
+  <pos whatEatForBreakfast='2'>some rests of sushi his sister must have left over</pos>
+</mod> and eat them voraciously.
+  </par>
+
+  <par>Breakfast has been eaten, time to get ready and leave the house. He doesn't want to be late. He stands up and "ouch", his <par bodyPartHurting='0'>head</par><par bodyPartHurting='1'>knee</par><par bodyPartHurting='2'>elbow</par> is still hurting. "I should wrap it up before I go".</par>
+  <par>
+In the bathroom he finds some bandage a wrap it around <par bodyPartHurting='0'>his head, covering the small wound caused by the fall.</par><par bodyPartHurting='1'>his knee, to help keep it in position.</par><par bodyPartHurting='2'>his elbow, wondering if this will make any difference.</par></par>
+  <par>
+Back in his bedroom, he looks for something to wear.</par>
+
+  <!-- gets ready -->
+
+  <par>Johnny gets ready.</par>
+
+  <!--chooses transport method-->
+
+  <par>Johnny decides to take <mod id='which transportation method?'>
+      <pos transportationMethod='0'>his bike</pos>
+      <pos transportationMethod='1'>the bus</pos>
+    </mod>. </par>
+
+  <!--he takes the bike-->
+  <par transportationMethod='0'>He take its bike and goes to the sanitation shop. </par>
+
+  <!--he goes to the bus-->
+  <par transportationMethod='1'>He walks to the bus stop. </par>
+
+  <!--he waits for the bus-->
+  <par transportationMethod='1'>He is at the bus stop, waiting for the bus. </par>
+
+  <!--he gets on the bus-->
+  <par transportationMethod='1'>The bus arrived, he gets on the bus. </par>
+
+  <!--he sees Dolores-->
+  <par transportationMethod='1'>Hey, that girl sitting at the end of the bus is Dolores, his high school crush. He feels <mod id='does he feel sexy today?'>
+    <pos feelingSexy='0'>ugly</pos>
+    <pos feelingSexy='1'>sexy</pos>
+  </mod> today, <par feelingSexy='0'>better to hide. He sits in in the second row, next to the window.</par><par feelingSexy='1'>let's go talk to her!
+  </par>
+</par>
+  
+  <!--he talks with Dolores-->
+  <par transportationMethod='1' feelingSexy='1'>"Hi Dolores!" "Hi, hey, ehm, Teddy?" "We were in school together." "Sure, I remember."
+  </par>
+  
+  <!--Dolores aks about his head-->
+  <par transportationMethod='1' feelingSexy='1'>"What's with your head?" "I slipped in the shower.
+  </par>
+  
+  <!--She tells she is going to study medicine-->
+  <par transportationMethod='1' feelingSexy='1'>"Have you done this and that? It could be a concussion..." "Ahahah, what are you, a doctor?" "Ehehe wanna be. Today I do my application."
+  </par>
+  
+  <!--She gets out of the bus one stop before him-->
+  <par transportationMethod='1' feelingSexy='1'>"This is my stop. See you around. "
+</par>
+
+  <!--He gets out of the bus-->
+  <par transportationMethod='1' feelingSexy='1'>Next stop: his stop. He gets out of the bus. The shop is three minutes away. He thinks... 
+</par>
+
+  <!--He decides to run back to the University-->
+  <par transportationMethod='1' feelingSexy='1'>"Fuck it!" He starts running in the opposite direction. The direction the bus came from. 
+</par>
+
+  <!--He applies for the university and calls his uncle?-->
+  <par transportationMethod='1' feelingSexy='1'>He arrives at the University. Where can I apply for medicine? <mod id='not today'>
+    <pos notToday='1'></pos>
+  </mod>
+YOU WON</par>
+  
+  <!--not talk with Dolores-->
+  <par transportationMethod='1' feelingSexy='0'>In ten minutes, Dolores gets out of the bus. Jhonny wonders where she were going. Next stop Jhonny gets out of the bus. Three minutes walk to the uncle's shop. </par>
+  
+  
+  <!-- UNCLE END -->
+  <par notToday='0'>
+    "Hi Jhonny!" his uncle greets him. "Are you ready for the first day of the rest of your life?"
+    Jhonny shivers and nods. It isn't the first time he's entered the shop. He wonders if the lights have always been as grey as they are today.
+
+    YOU LOSE</par>
+  
+</text>
