@@ -108,7 +108,7 @@
 
   <par>It's a very simple story: *br_*br_</par>
   <par>You are </par>
-  <mod>
+  <mod id="are you losing?">
     <pos lose="0">losing. </pos>
     <pos lose="1">winning. </pos>
   </mod>
