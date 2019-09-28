@@ -9,18 +9,19 @@
   <par>Two computers are facing them, another one is facing you. *br_</par>
   <par>The creepiest detail is the text on the computer monitor. This very text. *br_</par>
   <par>The sentence about this sentence is now apprearing on the screen. It describes its own appearance on the screen. *br_</par>
-  <par>Your brain discovers a new kind of pain. "Logic pain" is how you decide to call it. *i_"How does the computer know?"*ei_ you ask yourself "and why is it addressing me as "you"?"*br_</par>
+  <par>Your brain discovers a new kind of pain. "Logic pain" is how you decide to call it. *i_"How does the computer know?"  <par>*i_"Do you believe in Destiny?" *br_</par>
+ you ask yourself *i_"and why is it addressing me as "you"?"*ei_*br_</par>
   <par>One man finally start to speak: *br_</par>
-  <par>"Do you believe in Destiny?" *br_</par>
+  <par>*i_"Do you believe in Destiny?"*ei_ *br_</par>
   <par>You open your mouth and then close it. *br_</par>
-  <par>The man continues: "Do you believe that life follows certain paths, and that those paths are determined, somehow are written somewhere? *br_</par>
+  <par>The man continues: *i_"Do you believe that life follows certain paths, and that those paths are determined, somehow are written somewhere?*ei_ *br_</par>
   <par>We do. *br_</par>
   <par>Because we are those, who write the paths." *br_</par>
   <par>His facial expression isn't changing at all, but you still have the impression that he is looking at you more intensively now.*br_</par>
-  <par>"We are Destiny Writers, and maybe today you will become one of us." *br_</par>
-  <par>How could you answer to that? You body nods. Your brain doesn't know what to do with these words. *br_</par>
-  <par>"We are lucky to be here today. Human survival is a very improbable fact. Sometimes things can go very wrong." the guy continues. Then he opens a drawer and gets a gun out of it. It's an old revolver.*br_</par>
-  <par>"We have been lucky for millenias, so lucky that we learned how to improve our own luck."*br_</par>
+  <par>*i_"We are Destiny Writers, and maybe today you will become one of us."*ei_ *br_</par>
+  <par>How could you answer to that? You feel your body nod, but your brain doesn't know what to do with those words. *br_</par>
+  <par>*i_"We are lucky to be here today. Human survival is a very improbable fact. Sometimes things can go very wrong."*ei_ the guy continues. Then he opens a drawer and gets a gun out of it. It's an old revolver.*br_</par>
+  <par>*i_"We have been lucky for millenias, so lucky that we learned how to improve our own luck."*ei_*br_</par>
   <par>He opens the gun, which is empty, and put a single bullet in the barrel. He then spins the barrel, like people in old movies did, before they played... how was it called? Oh, yes "russian roulette".*br_</par>
   <par>He points the gun to the head of his colleague... and he pulls the trigger.*br_</par>
   <mod id="does the gun shoot?">
@@ -29,32 +30,34 @@
   </mod>
   <and gunShot="1">
     <par>*br_A lound noise, an explosion of blood, the body falls from the chair.*br_</par>
-    <par>With the same unchanged face expression the guy tells to a very shocked you: "Your choice: save his life, or leave this office." *br_His eyes are now looking at your computer.*br_</par>
+    <par>With the same unchanged face expression the guy tells to a very shocked you: *i_"Your choice: save his life, or leave this office."*ei_ *br_His eyes are now looking at your computer.*br_</par>
     <par>Your ears are still ringing and you are under shock, but you follow his eyes and look at the computer in front of you. *br_</par>
     <par>The computer kept describing the scene, but you notice that the sentence "The gun shoots." is written in a brighter color then the rest. *br_</par>
-    <par>"What should I do?" you ask. *br_</par>
-    <par>The man looks at you for few more seconds before simply saying: "Then go." *br_</par>
-    <par>You don't undestand.*br_ What is happening? What should you have done? *br_</par>
+    <par>*i_"There's nothing I can do!"*ei_ you whisper. *br_</par>
+    <par>The man looks at you for few more seconds before simply saying: *i_"Then go."*ei_ *br_</par>
+    <par>You don't undestand.*br_ What is happening? What could you have done? *br_</par>
     <par>But you worked for the Government for long enough before today, to recognize an order when you hear one. *br_</par>
     <par>You nod, stand up, walk to the door and leave the room. *br_*br_ GAME OVER</par>
   </and>
 
   <and gunShot="0">
     <par>After few seconds you realize you are not breathing. You start breathing again, while the guy nods at you with something very close to a smile.*br_</par>
-    <par>"The Writing Machine will tell you what you can change. Sometimes small details make a big diffence, as you just experienced in another possible Path of existence."*br_</par>
+    <par>*i_"The Writing Machine will tell you what you can change. Sometimes small details make a big diffence, as you just experienced in another possible Path of existence."*ei_*br_</par>
     <par>You follow his eyes and look at the screen in front of you. *br_The computer kept describing the scene, but you notice that the sentence "The gun shoots." is written in a brighter color then the rest. *br_</par>
-    <par>"The Writing Machine tells you what you can change, but can't decide what is meaningful." continues the man, while putting a jar on the table. "The decision, that is our job." He puts the hand in the jar and picks a <mod id="Color of the Ball">
+    <par>
+      *i_"The Writing Machine tells you what you can change, but can't decide what is meaningful."*ei_ continues the man, while putting a jar on the table. *i_"The decision, that is our job."*ei_ He puts the hand in the jar and picks a <mod id="Color of the Ball">
         <pos ball="0">red ball</pos>
         <pos ball="1">yellow ball </pos>
         <pos ball="2">green ball</pos>
       </mod> out of it. *br_</par>
-    <par>He look at the ball: "So, do you like it <par ball="0">red</par><par ball="1">yellow</par><par ball="2">green</par> ? You can change it to the color you like, it doesn't matter. It won't change anything else."*br_</par>
+    <par>
+      He look at the ball: *i_"So, do you like it <par ball="0">red</par><par ball="1">yellow</par><par ball="2">green</par> ? You can change it to the color you like, it doesn't matter. It won't change anything else."*ei_*br_</par>
     <par>He puts the <par ball="0">red</par><par ball="1">yellow</par><par ball="2">green</par> ball back in the jar.*br_</par>
-    <par>"Don't worry, your first missions won't make the difference between life and death. You will start with easy tasks, like we all did. And before you ask: No, you can't try to kill old dictators. And also no, you can't create a paradox which will erease your own existence."*br_</par>
+    <par>*i_"Don't worry, your first missions won't make the difference between life and death. You will start with easy tasks, like we all did. And before you ask: No, you can't try to kill old dictators. And also no, you can't create a paradox which will erease your own existence."*ei_*br_</par>
     <par>Your mind is blank. Your eyes low back to the screen and stare at the sentence "Your mind is blank" for a moment before they go back to the man.*br_</par>
-    <par>"You can go now" he says, "soon you will receive you first mission."*br_</par>
-    <par>You nod, stand up, and walk to the door.*br_*br</par>
-    <par></par>Apparently you just became a Destiny Writer.
+    <par>*i_"You can go now"*ei_ he says, *i_"soon you will receive you first mission."*ei_*br_</par>
+    <par>You nod, stand up, and walk to the door.*br_*br_</par>
+    <par></par>Apparently you just became a *i_Destiny Writer*ei_.
   </and>
   
 </text>
