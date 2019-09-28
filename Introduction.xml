@@ -9,13 +9,13 @@
   <par>Two computers are facing them, another one is facing you. *br_</par>
   <par>The creepiest detail is the text on the computer monitor. This very text. *br_</par>
   <par>The sentence about this sentence is now apprearing on the screen. It describes its own appearance on the screen. *br_</par>
-  <par>Your brain discovers a new kind of pain. "Logic pain" is how you decide to call it. *i_"How does the computer know?"*ei_ you ask yourself *i_"and why is it addressing me as "you"?"*ei_*br_</par>
+  <par>Your brain discovers a new kind of pain. "Logic pain" is how you decide to call it. *i_"How does the computer know?"*ei_ you ask yourself *i_"and why is it addressing me directly?"*ei_*br_</par>
   <par>One man finally start to speak: *br_</par>
   <par>*i_"Do you believe in Destiny?"*ei_ *br_</par>
   <par>You open your mouth and then close it. *br_</par>
-  <par>The man continues: *i_"Do you believe that life follows certain paths, and that those paths are determined, somehow are written somewhere?*ei_ *br_</par>
+  <par>The man continues: *i_"Do you believe that life follows certain paths, and that those paths are determined, somehow are written somewhere? *br_</par>
   <par>We do. *br_</par>
-  <par>Because we are those, who write the paths." *br_</par>
+  <par>Because we are those, who write the paths."*ei_ *br_</par>
   <par>His facial expression isn't changing at all, but you still have the impression that he is looking at you more intensively now.*br_</par>
   <par>*i_"We are Destiny Writers, and maybe today you will become one of us."*ei_ *br_</par>
   <par>How could you answer to that? You feel your body nod, but your brain doesn't know what to do with those words. *br_</par>
@@ -40,11 +40,10 @@
   </and>
 
   <and gunShot="0">
-    <par>After few seconds you realize you are not breathing. You start breathing again, while the guy nods at you with something very close to a smile.*br_</par>
+    <par>*br_After few seconds you realize you are not breathing. You start breathing again, while the guy nods at you with something very close to a smile.*br_</par>
     <par>*i_"The Writing Machine will tell you what you can change. Sometimes small details make a big diffence, as you just experienced in another possible Path of existence."*ei_*br_</par>
     <par>You follow his eyes and look at the screen in front of you. *br_The computer kept describing the scene, but you notice that the sentence "The gun shoots." is written in a brighter color then the rest. *br_</par>
-    <par>
-      *i_"The Writing Machine tells you what you can change, but can't decide what is meaningful."*ei_ continues the man, while putting a jar on the table. *i_"The decision, that is our job."*ei_ He puts the hand in the jar and picks a <mod id="Color of the Ball">
+    <par>*i_"The Writing Machine detects the events we are allowed to change, but it can't decide what is meaningful."*ei_ continues the man, while putting a jar on the table. *i_"To make the decisions, that is our job."*ei_ He puts the hand in the jar and picks a <mod id="Color of the Ball">
         <pos ball="0">red ball</pos>
         <pos ball="1">yellow ball </pos>
         <pos ball="2">green ball</pos>
