@@ -8,32 +8,32 @@
   <par>They look at you with no facial expression. *br_</par>
   <par>Two computers are facing them, another one is facing you. *br_</par>
   <par>The creepiest detail is the text on the computer monitor. This very text. *br_</par>
-  <par>The sentence about this sentence is now apprearing on the screen, how it describe its appearance on the screen. *br_ </par>
-  <par>Your brain discovers a new kind of pain. "Logic pain" is how you decide to call it. "How does the computer know?" you ask yourself "and why is it addressim me as "you"?"*br_</par>
+  <par>The sentence about this sentence is now apprearing on the screen. It describes its own appearance on the screen. *br_</par>
+  <par>Your brain discovers a new kind of pain. "Logic pain" is how you decide to call it. *i_"How does the computer know?"*ei_ you ask yourself "and why is it addressing me as "you"?"*br_</par>
   <par>One man finally start to speak: *br_</par>
   <par>"Do you believe in Destiny?" *br_</par>
   <par>You open your mouth and then close it. *br_</par>
   <par>The man continues: "Do you believe that life follows certain paths, and that those paths are determined, somehow are written somewhere? *br_</par>
   <par>We do. *br_</par>
   <par>Because we are those, who write the paths." *br_</par>
-  <par>His facial expression isn't changing at all, but you still have the impression that he is looking at you more intensively now.</par>
-  <par>We are Destiny Writers, and maybe today you will become one of us." *br_</par>
+  <par>His facial expression isn't changing at all, but you still have the impression that he is looking at you more intensively now.*br_</par>
+  <par>"We are Destiny Writers, and maybe today you will become one of us." *br_</par>
   <par>How could you answer to that? You body nods. Your brain doesn't know what to do with these words. *br_</par>
-  <par>"We are lucky to be here today. Human survival is a very improbable fact. Sometimes things can go very wrong." the guy continues. Then he opens a drawer and get a gun out of it. It's an old revolver.*br_</par>
-  <par>"We have been lucky for millenias, so lucky that we learn how to improve our own luck."*br_</par>
+  <par>"We are lucky to be here today. Human survival is a very improbable fact. Sometimes things can go very wrong." the guy continues. Then he opens a drawer and gets a gun out of it. It's an old revolver.*br_</par>
+  <par>"We have been lucky for millenias, so lucky that we learned how to improve our own luck."*br_</par>
   <par>He opens the gun, which is empty, and put a single bullet in the barrel. He then spins the barrel, like people in old movies did, before they played... how was it called? Oh, yes "russian roulette".*br_</par>
-  <par>He points the gun to the head of his colleague, you mouth is now open, and he pulls the trigger.*br_</par>
+  <par>He points the gun to the head of his colleague... and he pulls the trigger.*br_</par>
   <mod id="does the gun shoot?">
-    <pos gunShot="1">The gun shoots.*br_</pos>
-    <pos gunShot="0">The gun clicks, empty.*br_</pos>
+    <pos gunShot="1">The gun shoots.</pos>
+    <pos gunShot="0">The gun clicks, empty.</pos>
   </mod>
   <and gunShot="1">
-    <par>A lound noise, an explosion of blood, the body falls from the chair.*br_</par>
-    <par>With the same unchanged face expression the guy tells to a very shocked you: "Change it, or leave this office." _br*His eyes are now looking at your computer.*br_</par>
+    <par>*br_A lound noise, an explosion of blood, the body falls from the chair.*br_</par>
+    <par>With the same unchanged face expression the guy tells to a very shocked you: "Your choice: save his life, or leave this office." *br_His eyes are now looking at your computer.*br_</par>
     <par>Your ears are still ringing and you are under shock, but you follow his eyes and look at the computer in front of you. *br_</par>
     <par>The computer kept describing the scene, but you notice that the sentence "The gun shoots." is written in a brighter color then the rest. *br_</par>
     <par>"What should I do?" you ask. *br_</par>
-    <par>The man looks at you for few more seconds before talking for the last time: "Go." *br_</par>
+    <par>The man looks at you for few more seconds before simply saying: "Then go." *br_</par>
     <par>You don't undestand.*br_ What is happening? What should you have done? *br_</par>
     <par>But you worked for the Government for long enough before today, to recognize an order when you hear one. *br_</par>
     <par>You nod, stand up, walk to the door and leave the room. *br_*br_ GAME OVER</par>
