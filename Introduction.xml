@@ -1,0 +1,155 @@
+<!--
+  TAGS description
+  
+
+  
+  <par>
+      paragraph tag
+      takes arguments as conditional values, if all variables are true, the paragraph is evaluated
+      can contain other tags, which are evaluated if the paragraph is evaluated
+      
+  <mod>
+      modifiable tag
+      takes 1 argument, name: "id" - it defines the name of the variable for the array of possible choises for that modifiable
+      can only contain <pos> tags
+      
+      <pos> - second level tag (only in mod)
+      possibility tag - can only be used inside <mod>
+      takes as arguments the variables to set if the possibility is choosen
+  
+  <jum>
+      jump tag
+      takes as argument as id
+      the evaluation is suspended till the next <anc> tag with the same id (which has therefore to be on the same level or on the first one)
+      
+  <anc>
+      anchor tag
+      takes an argument as id
+      the evaluation continues if it has been stopped by a jump with the same tag
+      
+  <set />
+      each argument set a variable to a certain value
+  
+  <and>
+  <or>
+      conditional tags
+      their arguments are evaluated as "or" or "and"
+      if the evaluation returns true, the content is parsed
+  
+  <if_and>
+  <if_or>
+      conditional tags of second order
+      they take no arguments but second level tags: and, or, then, else
+      <then> second level tag
+      <else> second level tag
+      
+      
+  examples:
+  <if_or> <and var1="0" var2="0"> <or var1="0" var3="1"> <then>If true</then> <else>If false</else> </if or>   
+  
+  <set a1='-1' />
+  <set a1='+3' />
+  <set a2='0' />
+  <set a3='4' />
+  <set a4='0' />
+  <set a5='0' />
+  <set a6='5' />
+
+  <if_and>
+    <and a1='se_2' a2='0' a3='se_44'/>
+    <or a4='2' a5='!_2' a6='be_6' />
+    <then>
+      <par>true*br_</par>
+    </then>
+    <else>
+      <par>false*br_</par>
+    </else>
+  </if_and>
+  
+  
+     
+
+  SPECIAL SIGNS:
+  
+  *br_    becomes <br>   it's a line feed / line break
+  
+  up to two levels, indetation is removed
+  
+  
+  
+  VARIABLE COMPARISONS
+  
+  var1 = '0'      ==
+  var1 = '!_0'    !=    different
+  var1 = 's_0'    <     smaller
+  var1 = 'b_0'    >     bigger
+  var1 = 'se_0'   <=    smaller or equal
+  var1 = 'be_0'   >=    bigger or equal
+  
+  
+  
+  VARIABLE SETTING
+  
+  var1 = '0'    =
+  var1 = '+0'   +
+  var1 = '-0'   -
+  
+  DESIDERATA:
+  
+  - optional possibilities = possibilities which are there only if some variable... PROBLEM: the Dictionary of choises!
+      for now: implement it repeating the <mod> in two conditionals
+  - condition evaluation: not, bigger, smaller, OR
+  
+  
+  -->
+
+
+<text>
+
+  <par>All this work, all this training, for this?</par>
+  <par>An empty room, with just a table, three chairs, three computer terminal, two guys sitting in front of you. *br_</par>
+  <par>Their faces don't seem capable of expression. *br_</par>
+  <par>There is a computer in front of each one of them, and another one facing you. *br_</par>
+  <par>The creepy part is this text, appearing on the screen. This very text. *br_</par>
+  <par>This very sentence is now on the screen, describing how it is on the screen. Your brain discovers a new kind of pain. "Logic pain" is how you decide to call it. *br_</par>
+  <par>One guy finally start to speak: *br_</par>
+  <par>"Do you believe in Destiny? *br_</par>
+  <par>Do you believe that life follows certain paths, and that those paths are determined, are written somewhere? *br_</par>
+  <par>We do. *br_</par>
+  <par>Because we are those, who write those paths. *br_</par>
+  <par>We are Destiny Writers, and now you are one of us." *br_*br_</par>
+  <par>How could you answer to that? You body nods. *br_*br_</par>
+  <par>"We are lucky to be here today. Human survival is a very improbable fact. Sometimes things can go very wrong." the guy continues while he opens a drawer and get a gun out of it. It's an old revolver.*br_</par>
+  <par>"We have been lucky for millenias, so lucky that we came to the point, where we could become our own luck."*br_</par>
+  <par>He opens the gun, which is empty, and put on bullet in the barrel. He then spins the barrel, like people in old movies did, before they played... how was it called? Oh, yes "russian roulette".*br_</par>
+  <par>Then he points the gun to the head of his colleague and pulls the trigger.</par>
+  <mod id="does the gun shoot?">
+    <pos gunShot="1">The gun shoots.</pos>
+    <pos gunShot="0">The gun clicks, empty.</pos>
+  </mod>
+  <and gunShot="1">
+    <par>A lound noise, an explosion of blood, the body falls from the chair.*br_</par>
+    <par>With the same unchanged face expression the guy tells to a very shocked you: "Change it, or leave this office." His eyes looking at your computer.*br_</par>
+    <par>Your ears are still ringing and you are under shock, but you follow his eyes and look at the computer in front of you. *br_</par>
+    <par>"The gun shoots." is flashing. *br_</par>
+    <par>"What should I do?" you ask. *br_</par>
+    <par>The man looks at you for few more seconds before talking for the last time: "Go." *br_</par>
+    <par>You don't undestand. What is happening? What should I have done? *br_</par>
+    <par>But you have worked for the Government for long enough to recognize an order when you hear one. *br_</par>
+    <par>You nod, stand up, walk to the door and leave the room. *br_*br_ GAME OVER</par>
+  </and>
+
+  <and gunShot="0">
+    <par>After few seconds you realize you are not breathing. You start breathing again, while the guy nods at you with something very close to a smile.*br_</par>
+    <par>"The Writing Machine will tell you what you can change. Sometimes small details make a big diffence, as you just experienced in another possible Path of existence."*br_</par>
+    <par>You follow his eyes and look at the screen in front of you. The words "The gun clicks, empty" are flashing. *br_</par>
+    <par>"The Writing Machine tells you what you can change, but can't decide what is meaningful." continues the man, while putting a jar on the table. "This is your job." He puts the hand in the jar and picks a <mod id="Color of the Ball">
+        <pos ball="0">red ball</pos>
+        <pos ball="1">yellow ball </pos>
+        <pos ball="2">green ball</pos>
+      </mod> out of it. *br_</par>
+    <par>He look at the ball: "So, do you like it <par ball="0">red</par><par ball="1">yellow</par><par ball="2">green</par> ? It's ok, it doesn't matter. It won't change a thing."</par>
+    
+  </and>
+  
+</text>
