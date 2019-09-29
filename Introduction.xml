@@ -42,14 +42,13 @@
   <and gunShot="0">
     <par>*br_After few seconds you realize you are not breathing. You start breathing again, while the guy nods at you with something very close to a smile.*br_</par>
     <par>*i_"The Writing Machine will tell you what you can change. Sometimes small details make a big diffence, as you just experienced in another possible Path of existence."*ei_*br_</par>
-    <par>You follow his eyes and look at the screen in front of you. *br_The computer kept describing the scene, but you notice that the sentence "The gun shoots." is written in a brighter color then the rest. *br_</par>
+    <par>You follow his eyes and look at the screen in front of you. *br_The computer kept describing the scene, but you notice that the sentence "The gun clicks, empty." is written in a brighter color then the rest. *br_</par>
     <par>*i_"The Writing Machine detects the events we are allowed to change, but it can't decide what is meaningful."*ei_ continues the man, while putting a jar on the table. *i_"To make the decisions, that is our job."*ei_ He puts the hand in the jar and picks a <mod id="Color of the Ball">
         <pos ball="0">red ball</pos>
         <pos ball="1">yellow ball </pos>
         <pos ball="2">green ball</pos>
       </mod> out of it. *br_</par>
-    <par>
-      He look at the ball: *i_"So, do you like it <par ball="0">red</par><par ball="1">yellow</par><par ball="2">green</par> ? You can change it to the color you like, it doesn't matter. It won't change anything else."*ei_*br_</par>
+    <par>He look at the ball: *i_"So, do you like it <par ball="0">red</par><par ball="1">yellow</par><par ball="2">green</par> ? You can change it to the color you like, it doesn't matter. It won't change anything else."*ei_*br_</par>
     <par>He puts the <par ball="0">red</par><par ball="1">yellow</par><par ball="2">green</par> ball back in the jar.*br_</par>
     <par>*i_"Don't worry, your first missions won't make the difference between life and death. You will start with easy tasks, like we all did. And before you ask: No, you can't try to kill old dictators. And also no, you can't create a paradox which will erease your own existence."*ei_*br_</par>
     <par>Your mind is blank. Your eyes low back to the screen and stare at the sentence "Your mind is blank" for a moment before they go back to the man.*br_</par>
