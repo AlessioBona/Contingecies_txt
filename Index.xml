@@ -1,5 +1,5 @@
 <text>
-  <story version="0" file="Introduction">Introduction</story>
-  <story version="0" file="SimpleStory">A Simple Story</story>
-  <story version="0" file="OnlineStory">First Day of Work</story>
+  <story file="Introduction">Introduction</story>
+  <story file="SimpleStory">A Simple Story</story>
+  <story file="OnlineStory">First Day of Work</story>
 </text>
